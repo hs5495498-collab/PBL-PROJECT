@@ -1,41 +1,85 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+/* BODY — EXACT TEMPLATE BACKGROUND */
 body {
-    background-color: #020617;
+    margin: 0;
+    padding: 0;
+    background-color: #020617;   /* Deep Navy (Template Color) */
     color: #f8fafc;
     font-family: 'Plus Jakarta Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
+/* GLASS EFFECT (Same as Template) */
 .glass {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* GRADIENT TEXT */
 .gradient-text {
     background: linear-gradient(90deg, #60a5fa, #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* TIMER */
+/* NAVBAR GLASS BORDER */
+nav.glass {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* TIMER UI */
 #timerContainer {
     background: #ffffff;
     color: #020617;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
     border: 3px solid #3b82f6;
+    z-index: 1000;
 }
 
+/* TIMER WARNING (8–10 mins) */
 .timer-warning {
     animation: flicker 1s infinite;
     border: 3px solid #ef4444 !important;
+    color: #b91c1c !important;
 }
 
+/* TIMER STOP (After 10 mins) */
 .timer-stop {
     background-color: #991b1b !important;
     color: #ffffff !important;
+    border: 3px solid #f87171 !important;
+    animation: none;
 }
 
+/* WARNING ANIMATION */
 @keyframes flicker {
     0%, 100% { background-color: #ffffff; }
-    50% { background-color: #fecaca; }
+    50% { background-color: #fca5a5; }
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* SCROLLBAR (Optional — matches template dark theme) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
 }
